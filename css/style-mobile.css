@@ -8,6 +8,15 @@ header{
 section{
     width: 100%;
 }
+.section-container{
+    width: 100%;
+}
+.right-align{
+    margin-left: 0;
+}
+li{
+    padding: 11px;
+}
 footer{
     background-color: var(--black);
     width: 100%;
