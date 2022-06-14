@@ -6,28 +6,28 @@ for (let i = 0; i < length; i++) {
 
 }
 //SCROLL EVENT USED ONE BY ONE START//
-document.getElementsByClassName("section-menu")[0].addEventListener('click', () => {
-    document.getElementsByClassName('section-1')[0].scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+// document.getElementsByClassName("section-menu")[0].addEventListener('click', () => {
+//     document.getElementsByClassName('section-1')[0].scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
 
-document.getElementsByClassName("section-menu")[1].addEventListener('click', () => {
-    document.getElementsByClassName('section-2')[0].scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+// document.getElementsByClassName("section-menu")[1].addEventListener('click', () => {
+//     document.getElementsByClassName('section-2')[0].scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
 
-document.getElementsByClassName("section-menu")[2].addEventListener('click', () => {
-    document.getElementsByClassName('section-3')[0].scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-document.getElementsByClassName("section-menu")[3].addEventListener('click', () => {
-    document.getElementsByClassName('section-4')[0].scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+// document.getElementsByClassName("section-menu")[2].addEventListener('click', () => {
+//     document.getElementsByClassName('section-3')[0].scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
+// document.getElementsByClassName("section-menu")[3].addEventListener('click', () => {
+//     document.getElementsByClassName('section-4')[0].scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
 
 //SCROLL EVENT USED ONE BY ONE END//
 
@@ -48,14 +48,23 @@ for (let i = 0; i < btns.length; i++) {
 
 
 
+        
         this.className += " active";
+
+        const sectionToScroll = `section-${i+1}`
+        document.getElementsByClassName(sectionToScroll)[0].scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 }
 
 
-
+// This code adds active class on scroll event 
 let isInViewport = function (elem) {
     let distance = elem.getBoundingClientRect();
+    // console.log('elem', elem)
+    // console.log('top', distance.top)
+    // console.log('bottom', distance.bottom)
     return (
         distance.top <= 0 && distance.bottom > 0
     );
