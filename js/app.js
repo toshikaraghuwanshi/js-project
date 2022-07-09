@@ -2,7 +2,7 @@
 const sections = document.getElementsByTagName("section")
 const length = sections.length;
 for (let i = 0; i < length; i++) {
-    document.getElementsByClassName('navbar')[0].innerHTML += `<li class="section-menu">Section ${i + 1}</li>`;
+    document.getElementsByClassName('navbar')[0].innerHTML += `<li class="section-menu ${i === 0 ? 'active' : ''}">Section ${i + 1}</li>`;
 
 }
 //SCROLL EVENT USED ONE BY ONE START//
